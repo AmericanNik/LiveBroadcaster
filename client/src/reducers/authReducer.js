@@ -1,4 +1,10 @@
-import { SIGN_IN, SIGN_OUT } from '../actions/types';
+import {
+  SIGN_IN,
+  SIGN_OUT,
+  EDIT_USER,
+  CREATE_USER,
+  DELETE_USER,
+} from '../actions/types';
 
 const INITIAL_STATE = {
   isSignedIn: null,
