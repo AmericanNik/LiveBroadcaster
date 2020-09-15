@@ -21,9 +21,9 @@ class GoogleAuth extends React.Component {
   onAuthChange = (isSignedIn) => {
     if (isSignedIn) {
       let profile = this.auth.currentUser.get().getBasicProfile();
-      console.log(profile.getId());
-      console.log(profile);
-      console.log(profile.getName());
+      // console.log(profile.getId());
+      // console.log(profile);
+      // console.log(profile.getName());
       let userInfo = {
         userId: profile.NT,
         firstName: profile.tV,

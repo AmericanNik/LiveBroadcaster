@@ -1,4 +1,5 @@
 import streams from '../apis/streams';
+import history from '../history';
 import {
   SIGN_IN,
   SIGN_OUT,
@@ -40,10 +41,18 @@ export const signOut = () => {
 // POST
 // Create A Stream
 
-export const createStream = (formValues) => async (dispatch) => {
-  const response = await streams.post('/streams', formValues);
+export const createStream = (formValues) => async (dispatch, getState) => {
+  const { userId, userName, customIcon } = getState().auth;
+  const response = await streams.post('/streams', {
+    ...formValues,
+    userId,
+    userName,
+    customIcon,
+  });
 
   dispatch({ type: CREATE_STREAM, payload: response.data });
+  //Do some programmatic navigation to get user back to root route (stream list)
+  history.push('/');
 };
 
 // GET
@@ -67,8 +76,9 @@ export const fetchStream = (id) => async (dispatch) => {
 //Edit single stream
 
 export const editStream = (id, formValues) => async (dispatch) => {
-  const response = await streams.put(`/streams/${id}`, formValues);
+  const response = await streams.patch(`/streams/${id}`, formValues);
   dispatch({ type: EDIT_STREAM, payload: response.data });
+  history.push('/');
 };
 
 // DELETE
