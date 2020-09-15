@@ -1,35 +1,9 @@
 {
   "streams": [
     {
-      "title": "My Stream",
-      "description": "This is a great stream!",
-      "id": 1
-    },
-    {
-      "title": "My Stream",
-      "description": "This is a great stream!",
-      "id": 2
-    },
-    {
       "title": "Another Stream",
       "description": "This one is good too!",
       "id": 3
-    },
-    {
-      "title": "asdasd",
-      "description": "afasfas",
-      "userId": "110322311667469067063",
-      "userName": null,
-      "customIcon": null,
-      "id": 4
-    },
-    {
-      "title": "yerss",
-      "description": "asdfasdf",
-      "userId": "110322311667469067063",
-      "userName": null,
-      "customIcon": null,
-      "id": 5
     },
     {
       "title": "Reuse",

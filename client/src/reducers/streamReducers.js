@@ -23,6 +23,12 @@ export default (state = {}, action) => {
       return { ...state, [action.payload.id]: action.payload };
 
     case DELETE_STREAM:
+      /*
+            lodash omit "removes the property from an object" 
+            i.e. returns a new object excluding the propery selected
+            _.omit(object, propertyToExclude)
+             */
+      // console.log('reducer deleted stream: ', action.payload);
       return _.omit(state, action.payload);
 
     default:
