@@ -9,6 +9,13 @@
       "title": "Reuse",
       "description": "hey watch the reuse!",
       "id": 6
+    },
+    {
+      "title": "Some Stream!",
+      "description": "This is another test",
+      "userName": null,
+      "customIcon": null,
+      "id": 7
     }
   ],
   "users": []
